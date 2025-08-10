@@ -1,0 +1,52 @@
+{
+  "name": "athena-mcp-backend",
+  "version": "1.0.0",
+  "description": "AI Assistant Backend for Athena with MCP Server Support",
+  "main": "app.js",
+  "bin": {
+    "athena-mcp": "./mcp-server.js"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "mcp": "node mcp-server.js",
+    "mcp:dev": "nodemon mcp-server.js"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "express",
+    "nodejs",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@octokit/rest": "^21.0.2",
+    "@wonderwhy-er/desktop-commander": "^0.2.7",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "fs-extra": "^11.2.0",
+    "googleapis": "^154.1.0",
+    "mcp-replicate": "^0.1.1",
+    "node-telegram-bot-api": "^0.66.0",
+    "openai": "^4.73.0",
+    "ping": "^0.4.4",
+    "puppeteer": "^24.15.0",
+    "replicate": "^1.0.1",
+    "telegraf": "^4.16.3"
+  },
+  "optionalDependencies": {
+    "dockerode": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

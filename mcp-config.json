@@ -1,0 +1,85 @@
+{
+  "mcpServers": {
+    "athena": {
+      "command": "node",
+      "args": ["d:\\Projects\\Athena MCP\\mcp-server-improved.js"],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "OPENWEATHER_API_KEY": "${OPENWEATHER_API_KEY}",
+        "NODE_ENV": "production"
+      }
+    },
+    "video-generation": {
+      "command": "node",
+      "args": ["d:\\Projects\\Athena MCP\\mcp-video-gen\\build\\server-index.js"],
+      "cwd": "d:\\Projects\\Athena MCP\\mcp-video-gen",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "RUNWAYML_API_SECRET": "${RUNWAYML_API_SECRET}",
+        "LUMAAI_API_KEY": "${LUMAAI_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+        "NODE_ENV": "production"
+      }
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["-y", "@wonderwhy-er/desktop-commander"],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "warn"
+      }
+    },
+    "replicate": {
+      "command": "node",
+      "args": ["d:\\Projects\\Athena MCP\\mcp-replicate-wrapper.js"],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN}",
+        "NODE_ENV": "production"
+      }
+    },
+    "gdrive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "GDRIVE_CREDENTIALS_PATH": "d:\\Projects\\Athena MCP\\credentials\\.gdrive-server-credentials.json",
+        "GDRIVE_OAUTH_PATH": "d:\\Projects\\Athena MCP\\credentials\\gcp-oauth.keys.json",
+        "NODE_ENV": "production"
+      }
+    },
+    "deepview": {
+      "command": "python",
+      "args": ["-m", "deepview_mcp", "d:\\Projects\\Athena MCP\\repomix-output.xml", "--model", "gemini-2.0-flash-lite"],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "NODE_ENV": "production"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "d:\\Projects\\Athena MCP",
+        "d:\\Projects",
+        "C:\\Users\\Pimpn\\Documents",
+        "C:\\Users\\Pimpn\\Downloads"
+      ],
+      "cwd": "d:\\Projects\\Athena MCP",
+      "env": {
+        "PATH": "C:\\Program Files\\nodejs;${PATH}",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
