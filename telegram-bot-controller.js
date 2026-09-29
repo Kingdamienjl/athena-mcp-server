@@ -22,7 +22,7 @@
  */
 
 require('dotenv').config();
-const TelegramBot = require('node-telegram-bot-api');
+const { default: TelegramBot } = require('node-telegram-bot-api');
 const { execSync, exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -332,7 +332,7 @@ ${emoji.info} Check your project directory for detailed results.
         // Send the image file
         await this.bot.sendPhoto(chatId, latestImage, {
           caption: `${emoji.image} Generated with DALL-E 3\n\n**Prompt:** "${prompt}"\n\n${emoji.rocket} Created by Athena MCP\n📁 Saved as: ${imageFiles[0]}`,
-          reply_to_message_id: statusMsg.message_id
+          reply_parameters: { message_id: statusMsg.message_id }
         });
         
         // Delete the status message
